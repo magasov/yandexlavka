@@ -18,6 +18,6 @@ import Main from '@/components/Main.vue';
     .home {
         display: flex; 
         gap: 50px;
-
+        min-height: calc(100vh - 80px);
     }
 </style>

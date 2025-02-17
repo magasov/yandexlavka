@@ -14,8 +14,8 @@ export default {
 .cart {
     flex: 2;
     background: red;
+    height: max-content;
     position: sticky;
     top: 80px;
-    height: calc(100vh - 80px);
 }
 </style>

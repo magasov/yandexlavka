@@ -122,10 +122,10 @@ export default {
 <style lang="scss" scoped>
 .catalog {
     flex: 2;
+    height: max-content;
     position: sticky;
     top: 80px;
-    height: calc(100vh - 80px);
-
+    
     &__main {
         padding: 20px 0;
         height: 100%;

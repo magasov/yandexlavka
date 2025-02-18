@@ -44,7 +44,7 @@ header {
     position: sticky;
     top: 0;
     background: #fff;
-    z-index: 2;
+    z-index: 99;
 
     .input {
         flex: 1;

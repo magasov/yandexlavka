@@ -25,6 +25,21 @@
         </div>
         <div class="catalog auth">Войти</div>
     </header>
+    <div class="overflow">
+        <div class="popup__auth">
+            <img  class="logo" src="../assets/icons/logo.svg" alt="#">
+            <span><h1>Войти c помощью телефона</h1></span>
+            <div class="input_auth">    
+                <input type="text" name="" id="" placeholder="+7 (000) 000-00-00">
+            </div>
+            <button class="btn_auth">Войти</button>
+            <span class="m_face">    
+                <button class="btn_face"><img src="https://yastatic.net/s3/passport-static/core/v1.198.0/i/authv2/fingerprint-icon.svg"> По лицу или отпечатку</button>
+            </span>
+            <button class="btn_id">Создать ID</button>
+        </div>
+
+    </div>
 </template>
 
 <script>
@@ -127,6 +142,90 @@ header {
 
         &:hover {
             background: #e7e7e7;
+        }
+    }
+}
+
+.overflow {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #0000008a;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .input_auth{
+        padding-top: 24px;
+        input{
+            width: 264px;
+            height: 52px;
+            font-size: 20px;
+            padding-left:22px;
+            border-radius: 20px;
+            
+            &::placeholder{
+                color: rgba(147,156,176,.4);
+                
+            }
+        }
+    }
+
+    .logo img{
+        width: 127px;
+        height: 32px;
+    }
+    .popup__auth {
+        width: 100%;
+        max-width: 312px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background: #fff;
+        border-radius: 20px;
+        padding: 32px;
+        align-items: center;
+        h1{
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .btn_auth{
+            width: 286px;
+            height: 56px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            background-color: #292933;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        .m_face{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn_face{
+            width: 286px;
+            height: 56px;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            background-color: #c0c0c05a;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer; 
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            column-gap: 8px;
+            span{
+                width: 24px;
+                height: 24px;
+            }
         }
     }
 }

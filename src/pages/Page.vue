@@ -89,11 +89,11 @@
             <a href="#">
                 <div class="cardOther">
                     <div class="imgOther">
-                        <img src="../assets/item/464x464-webp2.webp" alt="#">
+                        <img src="../assets/item/card.webp" alt="#">
                     </div>
                     <div class="discriptionOther">
                         <h3>126 ₽</h3>
-                        <p>Смесь для приготовления кофе</p>
+                        <p>Смесь для приготовления кофе Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis rerum magni eos nihil placeat laudantium saepe ab, harum at voluptate labore blanditiis alias ea dolor deserunt velit fugit quam quia.</p>
                         <span>360 г</span>
                     </div>
                     <div class="buttonOther">
@@ -112,15 +112,31 @@
         margin: 0 auto;
         margin-top: 32px;
         .cardOther{
-            width: 234px;
+           flex: 1;
             height: 390px;
             background-color: #f8f7f5;
+            border-radius: 24px;
+            padding: 0 0 10px 0;
             .discriptionOther{
                 padding: 0px 12px 16px;
+                span{
+                    font-size: 16px;
+                    color: #9E9B98;
+                }
+                p {
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                }
             }
             .buttonOther{
                 background-color: white;
                 border: none;
+                border-radius: 16px;
+                width: 218px;
+                height: 48px;
+                margin: auto;
                 button{
                     width: 218px;
                     height: 48px;
@@ -128,7 +144,13 @@
                     font-size: 16px;
                     border-radius: 16px;
                     border: none;
+                    background-color: white;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #f8f7f5;
+                    }
                 }
+
             }
             img{
                 height: 100%;
@@ -136,9 +158,14 @@
             }
         }
         .mainOther{
-            display: flex;
-            a :hover{
-                background-color: hsla(30,3%,53%,.2);
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 8px;
+            margin-top: 32px;
+            .cardOther {
+                &:hover {
+                    background-color: hsla(30,3%,53%,.2);
+                }
             }
         }
     }

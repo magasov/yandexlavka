@@ -37,22 +37,26 @@
      {
          image: "https://yastatic.net/avatars/get-grocery-goods/2888787/aa0bac94-59fc-4228-bf03-4c3b11e4862b/928x928-webp",
          description: "Мякоть бедра цыплёнка-бройлера с овощами",
-         weight: "700 г"
+         weight: "700 г",
+         price: "314₽",
      },
      {
          image: "https://yastatic.net/avatars/get-grocery-goods/2998515/940a6cf8-84ce-45b3-9cb3-db598a6c402b/928x928-webp",
          description: "Голень куриная «Ферма Евгения Рошаля» охлаждённая",
-         weight: "600 г"
+         weight: "600 г",
+         price: "233₽",
      },
      {
          image: "https://yastatic.net/avatars/get-grocery-goods/2805921/fbd9102a-853c-4227-a185-9261042a8f90/928x928-webp",
          description: "Печень цыплёнка-бройлера «Троекурово»",
-         weight: "500 г"
+         weight: "500 г",
+         price: "130₽",
      },
      {
          image: "https://yastatic.net/avatars/get-grocery-goods/2750890/80649eac-ab27-4b86-a36a-bee38956cc8f/928x928-webp",
          description: "Стейкбургер с чёрным перцем «Из Лавки»",
-         weight: "360 г"
+         weight: "360 г",
+         price: "251₽",
      },
     ]);
  </script>

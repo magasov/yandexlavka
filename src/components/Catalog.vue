@@ -6,26 +6,26 @@
             <h3>Каталог</h3>
 
             <nav class="links">
-                <a href="ready-meals"> <img
+                <a href=""> <img
                         srcset="https://yastatic.net/avatars/get-grocery-goods/2998515/bccfe9f8e863453f9babb72d4d9b0d0e/40x40-webp 1x,https://yastatic.net/avatars/get-grocery-goods/2998515/bccfe9f8e863453f9babb72d4d9b0d0e/80x80-webp 2x"
                         src="https://yastatic.net/avatars/get-grocery-goods/2998515/bccfe9f8e863453f9babb72d4d9b0d0e/40x40-webp"
                         decoding="async" loading="eager" alt="Придумано Яндекс Лавкой" class="i1y1fbtp" width="40"
                         height="40" role="presentation">
                     Придумано Яндекс Лавкой</a>
-                <a href="vegetables"><img
+                <a href="ready-meals"><img
                         srcset="https://yastatic.net/avatars/get-grocery-goods/2750890/8ec7075a680646a08325b8cdf25565de/40x40-webp 1x,https://yastatic.net/avatars/get-grocery-goods/2750890/8ec7075a680646a08325b8cdf25565de/80x80-webp 2x"
                         src="https://yastatic.net/avatars/get-grocery-goods/2750890/8ec7075a680646a08325b8cdf25565de/40x40-webp"
                         decoding="async" loading="eager" alt="Готовая еда" class="i1y1fbtp" width="40" height="40"
                         role="presentation"> Готовая еда
 
                 </a>
-                <a href="dairy"><img
+                <a href="vegetables"><img
                         srcset="https://yastatic.net/avatars/get-grocery-goods/2750890/9e5b5c3d91a7469a852c3163dfef5e3c/40x40-webp 1x,https://yastatic.net/avatars/get-grocery-goods/2750890/9e5b5c3d91a7469a852c3163dfef5e3c/80x80-webp 2x"
                         src="https://yastatic.net/avatars/get-grocery-goods/2750890/9e5b5c3d91a7469a852c3163dfef5e3c/40x40-webp"
                         decoding="async" loading="eager" alt="Овощной прилавок" class="i1y1fbtp" width="40" height="40"
                         role="presentation"> Овощной прилавок
                 </a>
-                <a href="drinks"><img
+                <a href="drairy"><img
                         srcset="https://yastatic.net/avatars/get-grocery-goods/2750890/7e196d537e5b46d79062a2ed5dfc4ccd/40x40-webp 1x,https://yastatic.net/avatars/get-grocery-goods/2750890/7e196d537e5b46d79062a2ed5dfc4ccd/80x80-webp 2x"
                         src="https://yastatic.net/avatars/get-grocery-goods/2750890/7e196d537e5b46d79062a2ed5dfc4ccd/40x40-webp"
                         decoding="async" loading="eager" alt="Молочный прилавок" class="i1y1fbtp" width="40" height="40"

@@ -61,7 +61,10 @@
       </span>
       Укажите адрес доставки
     </div>
-    <div class="catalog btnsort">
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+
+    <div class="catalog btnsort" @click="isCatalogModalOpen = true">
       <span>
         <svg
           class="i1rjkic7"
@@ -118,6 +121,24 @@
         </svg>
       </span>
     </div>
+
+    <div v-if="isCatalogModalOpen" class="overflow" @click.self="isCatalogModalOpen = false">
+      <div class="popup__catalog">
+        <h1>Что отметить в составе товара?</h1>
+        <p>У товаров с выбранными ингредиентами появится значок в каталоге</p>
+        <div class="products">
+          <div v-for="(product, index) in products" :key="index" class="product">
+            <img :src="product.image" alt="product" />
+            <div class="product_name">{{ product.name }}</div>
+          </div>
+        </div>
+        <button class="btn_close" @click="isCatalogModalOpen = false">Закрыть</button>
+      </div>
+    </div>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////// -->
+
+    
     <div  @click="toggleAuthModal">
       <span class="catalog auth" v-if="isUserLoggedIn">Выйти</span>
       <span class="catalog auth" v-else>Войти</span>
@@ -152,6 +173,103 @@ export default {
       isAuthModalOpen: false,
       phone: "",
       isUserLoggedIn: false,
+
+      isCatalogModalOpen: false,
+      products: [
+        {
+          name: "Яйца",
+          image: "https://yastatic.net/avatars/get-bunker/60661/2884c8c2119741e4315d98aec8c2b3233818eabe/orig",
+        },
+        {
+          name: "Рыба",
+          image: "	https://yastatic.net/avatars/get-bunker/998550/a79be3f1a7e48ebca29fea15b846d208ee3e31f9/orig",
+        },
+        {
+          name: "Орехи",
+          image: "	https://yastatic.net/avatars/get-bunker/998550/09a3edc56e91a73f9447fd1eb5c64981a1ceeddb/orig",
+        },
+        {
+          name: "Глютен",
+          image: "	https://yastatic.net/avatars/get-bunker/118781/90cde6132b5bfc06264e997d4f288d0048cacdef/orig",
+        },
+        {
+          name: "Арахис",
+          image: "https://yastatic.net/avatars/get-bunker/49769/c8942670d9e582c008c1ea1fdef1ceccfa63341c/orig",
+        },
+        {
+          name: "Курица",
+          image: "	https://yastatic.net/avatars/get-bunker/60661/e108f3c0e6abed3e6ef325665b9d1e85f8938f75/orig",
+        },
+        {
+          name: "Молоко",
+          image: "https://yastatic.net/avatars/get-bunker/998550/584497888ffe6350bb66ec10dce02ec7ec5bf149/orig",
+        },
+        {
+          name: "Кинза",
+          image: "https://yastatic.net/avatars/get-bunker/50064/8fac952d8e8fb03a1d2110fada5ebf4aaca0eddd/orig",
+        },
+        {
+          name: "Говядина",
+          image: "https://yastatic.net/avatars/get-bunker/998550/05ef2d82088f84bae8b50a8614ca9a6c2b3df5c6/orig",
+        },
+        {
+          name: "Свинина",
+          image: "https://yastatic.net/avatars/get-bunker/56833/76c7a269e952443be0b102c5e62f322c0564cc18/orig",
+        },
+        {
+          name: "Мёд",
+          image: "https://yastatic.net/avatars/get-bunker/998550/befb4830e9f4d615546a56669895ec8757ceae68/orig",
+        },
+        {
+          name: "Лук",
+          image: "https://yastatic.net/avatars/get-bunker/998550/cf856e23a7d095442694904a7f2006961ad44849/orig",
+        },
+        {
+          name: "Сахар",
+          image: "	https://yastatic.net/avatars/get-bunker/60661/f5d2abdbeb468020d71547095d24b3ed38f7b52d/orig",
+        },
+        {
+          name: "Помидоры",
+          image: "	https://yastatic.net/avatars/get-bunker/56833/87ef1a48978fa5a0e74abd72236f9c68f8a2258d/orig",
+        },
+        {
+          name: "Море-продукты",
+          image: "	https://yastatic.net/avatars/get-bunker/56833/9f98c08f57e1f8e95a6496c56bd566fb6c412e62/orig",
+        },
+        {
+          name: "Сладкий перец",
+          image: "	https://yastatic.net/avatars/get-bunker/49769/4dd4d242cf9522187b69ac4d0cd4ca754ed11f84/orig",
+        },
+        {
+          name: "Чеснок",
+          image: "	https://yastatic.net/avatars/get-bunker/50064/4507a83dfa1c4739216d095c3857e4655a2cb409/orig",
+        },
+        {
+          name: "Грибы",
+          image: "	https://yastatic.net/avatars/get-bunker/49769/a632618057c03efd59f8bc3193ec1cfe4d5aff4b/orig",
+        },
+        {
+          name: "Без мяса",
+          image: "	https://yastatic.net/avatars/get-bunker/61205/30447ee702d22ac90e2179eaf41f9e61596f48a5/orig",
+        },
+        {
+          name: "Мало калорий",
+          image: "	https://yastatic.net/avatars/get-bunker/128809/97e4179ed0480cb116fa2655a587e338b03d4720/orig",
+        },
+        {
+          name: "Острое",
+          image: "	https://yastatic.net/avatars/get-bunker/998550/dcc7273908a618e0d2745d7a76f65d8fb5d1b33d/orig",
+        },
+        {
+          name: "Много белка",
+          image: "	https://yastatic.net/avatars/get-bunker/61205/cb6ee3a9ee1a8af5bccc801e88fe077a3789cace/orig",
+        },
+        {
+          name: "Мало углеводов",
+          image: "	https://yastatic.net/avatars/get-bunker/61205/ec62b55738074087cd551c2bd4acbee59a3cde39/orig",
+        },
+      ],
+
     };
   },
   mounted() {
@@ -360,6 +478,91 @@ header {
         width: 24px;
         height: 24px;
       }
+    }
+    .btn_id{
+      width: 286px;
+      height: 56px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      background-color: transparent;
+      border-radius: 20px;
+      border: 1px solid #292933;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      column-gap: 8px;
+    }
+  }
+}
+
+.popup__catalog {
+  border-radius: 32px;
+  position: relative;
+  width: 568px;
+  height: 580px;
+  max-width: 800px;
+  background: #fff;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
+
+  h1 {
+    font-size: 29px;
+    font-weight: 800;
+  }
+  p{
+    margin: 0;
+    font-size: 16px;
+    color: #9e9b98;
+  }
+  .products {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 8px;
+    row-gap: 8px;
+
+    .product {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 88px;
+      height: 100px;
+      cursor: pointer;
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+      }
+      .product_name{
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        height: 100%;
+        text-align: center;
+        font-size: 13px;
+        padding: 0 8px;
+        font-weight: 600;
+        height: 48px;
+      }
+    }
+  }
+
+  .btn_close {
+    min-width: 200px;
+    width: 200px;
+    height: 56px;
+    background: #fce000;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 16px;
+    &:hover {
+      background: #e7e7e7;
     }
   }
 }

@@ -145,108 +145,117 @@
             </div>
         </div>
         <div class="pridumano">
-            <h3>Овощной прилавок</h3>
-            <div class="pridumano__card">
-                <div class="cards">
-                    <p>Самый сезон</p>
-                    <img src="https://yastatic.net/avatars/get-grocery-goods/2783132/9f0451a9-d01b-4947-a536-52193a400e00/576x280-webp"
-                        alt="card">
+        <h3>Овощной прилавок</h3>
+            <a href="vegetables">
+                <div class="pridumano__card">
+                        <div class="cards">
+                            <p>Самый сезон</p>
+                            <img src="https://yastatic.net/avatars/get-grocery-goods/2783132/9f0451a9-d01b-4947-a536-52193a400e00/576x280-webp"
+                                alt="card">
+                        </div>
+                    <div class="cards">
+                        <p>Овощи, грибы и зелень</p>
+                        <img src="https://yastatic.net/avatars/get-grocery-goods/2805921/60bf165e315141eaa8e98a6b6f9efaed/576x280-webp"
+                            alt="card">
+                    </div>
+                    <div class="cards">
+                        <p>Фрукты и ягоды</p>
+                        <img src="https://yastatic.net/avatars/get-grocery-goods/2998515/cb13d3b1910247d68fdb6d7fd1b5a4ca/576x280-webp"
+                            alt="card">
+                    </div>
                 </div>
-                <div class="cards">
-                    <p>Овощи, грибы и зелень</p>
-                    <img src="https://yastatic.net/avatars/get-grocery-goods/2805921/60bf165e315141eaa8e98a6b6f9efaed/576x280-webp"
-                        alt="card">
-                </div>
-                <div class="cards">
-                    <p>Фрукты и ягоды</p>
-                    <img src="https://yastatic.net/avatars/get-grocery-goods/2998515/cb13d3b1910247d68fdb6d7fd1b5a4ca/576x280-webp"
-                        alt="card">
-                </div>
-            </div>
+            </a>
         </div>
         <div class="pridumano">
-            <h3>Молочный прилавок</h3>
-            <div class="pridumano__card">
-                <div class="cards" style="flex: 2;">
-                    <p>Молоко, масло и яйца</p>
-                    <img src="https://yastatic.net/avatars/get-grocery-goods/2888787/0f08f834-4e79-457d-a17e-e92c7dbab588/576x280-webp"
-                        alt="card">
+        <h3>Молочный прилавок</h3>
+            <a href="dairy">    
+                <div class="pridumano__card">
+                    <div class="cards" style="flex: 2;">
+                        <p>Молоко, масло и яйца</p>
+                        <img src="https://yastatic.net/avatars/get-grocery-goods/2888787/0f08f834-4e79-457d-a17e-e92c7dbab588/576x280-webp"
+                            alt="card">
+                    </div>
+                    <div class="cards">
+                        <p>Сыры</p>
+                        <img src="https://yastatic.net/avatars/get-grocery-goods/6247604/e8e5ec84-c8b6-4be4-8048-dcf7341e7788/280x280-webp"
+                            alt="card">
+                    </div>
+                    <div class="cards">
+                        <p>Кефир, сметана, творог</p>
+                        <img src="https://yastatic.net/avatars/get-grocery-goods/2750890/820b9282-c32e-4f27-9d75-c383cbfcd65e/280x280-webp"
+                            alt="card">
+                    </div>
+                    <div class="cards">
+                        <p>Йогурты и десерты</p>
+                        <img src="https://yastatic.net/avatars/get-grocery-goods/2756334/7749315900064e57b8936a4fc80106fa/280x280-webp"
+                            alt="card">
+                    </div>
+                    <div class="cards">
+                        <p>Молочное для детей</p>
+                        <img src="https://yastatic.net/avatars/get-grocery-goods/2750890/a410575109ae4d40aa79b83eaaa261e5/280x280-webp"
+                            alt="card">
+                    </div>
                 </div>
-                <div class="cards">
-                    <p>Сыры</p>
-                    <img src="https://yastatic.net/avatars/get-grocery-goods/6247604/e8e5ec84-c8b6-4be4-8048-dcf7341e7788/280x280-webp"
-                        alt="card">
-                </div>
-                <div class="cards">
-                    <p>Кефир, сметана, творог</p>
-                    <img src="https://yastatic.net/avatars/get-grocery-goods/2750890/820b9282-c32e-4f27-9d75-c383cbfcd65e/280x280-webp"
-                        alt="card">
-                </div>
-                <div class="cards">
-                    <p>Йогурты и десерты</p>
-                    <img src="https://yastatic.net/avatars/get-grocery-goods/2756334/7749315900064e57b8936a4fc80106fa/280x280-webp"
-                        alt="card">
-                </div>
-                <div class="cards">
-                    <p>Молочное для детей</p>
-                    <img src="https://yastatic.net/avatars/get-grocery-goods/2750890/a410575109ae4d40aa79b83eaaa261e5/280x280-webp"
-                        alt="card">
-                </div>
-            </div>
+            </a>    
         </div>
         <div class="pridumano">
             <h3>Булочная</h3>
-            <div class="pridumano__card">
-                <div class="cards">
-                    <p>Хлеб</p>
-                    <img src="https://yastatic.net/avatars/get-grocery-goods/2791769/f9f52780f8964135886e9d9c7d45a053/576x280-webp"
-                        alt="card">
+            <a href="bakary">
+                <div class="pridumano__card">
+                    <div class="cards">
+                        <p>Хлеб</p>
+                        <img src="https://yastatic.net/avatars/get-grocery-goods/2791769/f9f52780f8964135886e9d9c7d45a053/576x280-webp"
+                            alt="card">
+                    </div>
+                    <div class="cards">
+                        <p>Выпечка</p>
+                        <img src="https://yastatic.net/avatars/get-grocery-goods/2791769/7663001bf3fa4794a595841e541f74c2/576x280-webp"
+                            alt="card">
+                    </div>
+                    <div class="cards">
+                        <p>Хлебцы</p>
+                        <img src="https://yastatic.net/avatars/get-grocery-goods/2998515/98830eb076844d15b4a251acf6c8ab54/576x280-webp"
+                            alt="card">
+                    </div>
                 </div>
-                <div class="cards">
-                    <p>Выпечка</p>
-                    <img src="https://yastatic.net/avatars/get-grocery-goods/2791769/7663001bf3fa4794a595841e541f74c2/576x280-webp"
-                        alt="card">
-                </div>
-                <div class="cards">
-                    <p>Хлебцы</p>
-                    <img src="https://yastatic.net/avatars/get-grocery-goods/2998515/98830eb076844d15b4a251acf6c8ab54/576x280-webp"
-                        alt="card">
-                </div>
-            </div>
+            </a>
         </div>
         <div class="pridumano">
             <h3>Вода и напитки</h3>
-            <div class="pridumano__card">
-                <div class="cards" style="flex: 2;">
-                    <p>Вода</p>
-                    <img src="https://yastatic.net/avatars/get-grocery-goods/2888787/dd5a4ba2128f4d1fb1887a1ff98d44c2/576x280-webp"
-                        alt="card">
+            <a href="drinks">
+                <div class="pridumano__card">
+                    <div class="cards" style="flex: 2;">
+                        <p>Вода</p>
+                        <img src="https://yastatic.net/avatars/get-grocery-goods/2888787/dd5a4ba2128f4d1fb1887a1ff98d44c2/576x280-webp"
+                            alt="card">
+                    </div>
+                    <div class="cards">
+                        <p>Соки и морсы</p>
+                        <img src="https://yastatic.net/avatars/get-grocery-goods/2750890/a88aa0c0-174c-4e02-b85a-9c595677fd0f/280x280-webp"
+                            alt="card">
+                    </div>
+                    <div class="cards">
+                        <p>Газировка и тоники</p>
+                        <img src="https://yastatic.net/avatars/get-grocery-goods/2998515/e3e97b4f-9c10-4f64-bbb9-d4f1d60b6f06/280x280-webp"
+                            alt="card">
+                    </div>
+                    <div class="cards">
+                        <p>Холодный чай и кофе</p>
+                        <img src="https://yastatic.net/avatars/get-grocery-goods/2805921/0298fa4a1cae405cbfaa67ad518ba330/280x280-webp"
+                            alt="card">
+                    </div>
+                    <div class="cards">
+                        <p>Энергетики, пиво и вино</p>
+                        <img src="https://yastatic.net/avatars/get-grocery-goods/2888787/6c75a22a-751c-4ac2-b180-37ab365d6bbb/280x280-webp"
+                            alt="card">
+                    </div>
                 </div>
-                <div class="cards">
-                    <p>Соки и морсы</p>
-                    <img src="https://yastatic.net/avatars/get-grocery-goods/2750890/a88aa0c0-174c-4e02-b85a-9c595677fd0f/280x280-webp"
-                        alt="card">
-                </div>
-                <div class="cards">
-                    <p>Газировка и тоники</p>
-                    <img src="https://yastatic.net/avatars/get-grocery-goods/2998515/e3e97b4f-9c10-4f64-bbb9-d4f1d60b6f06/280x280-webp"
-                        alt="card">
-                </div>
-                <div class="cards">
-                    <p>Холодный чай и кофе</p>
-                    <img src="https://yastatic.net/avatars/get-grocery-goods/2805921/0298fa4a1cae405cbfaa67ad518ba330/280x280-webp"
-                        alt="card">
-                </div>
-                <div class="cards">
-                    <p>Энергетики, пиво и вино</p>
-                    <img src="https://yastatic.net/avatars/get-grocery-goods/2888787/6c75a22a-751c-4ac2-b180-37ab365d6bbb/280x280-webp"
-                        alt="card">
-                </div>
-            </div>
+            </a>
         </div>
         <div class="pridumano">
             <h3>Сладкое и снеки</h3>
-            <div class="pridumano__card two__card">
+            <a href="sweets">
+                <div class="pridumano__card two__card">
                 <div class="one">
                     <div class="cards">
                     <p>Снеки</p>
@@ -287,9 +296,11 @@
                 </div>
                 </div>
             </div>
+            </a>
         </div>
         <div class="pridumano">
             <h3>Мясо, птица, рыба</h3>
+           <a href="meat-fish">
             <div class="pridumano__card">
                 <div class="cards" style="flex: 2;">
                     <p>Мясо и птица</p>
@@ -312,10 +323,12 @@
                         alt="card">
                 </div>
             </div>
+           </a>
         </div>
         <div class="pridumano">
             <h3>Заморозка</h3>
-            <div class="pridumano__card two__card">
+            <a href="frozen">
+                <div class="pridumano__card two__card">
                 <div class="one">
                     <div class="cards">
                     <p>Мороженое</p>
@@ -355,7 +368,8 @@
                         alt="card">
                 </div>
                 </div>
-            </div>
+                </div>
+            </a>
         </div>
     </div>
 </template>

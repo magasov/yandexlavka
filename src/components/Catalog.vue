@@ -25,28 +25,28 @@
                         decoding="async" loading="eager" alt="Овощной прилавок" class="i1y1fbtp" width="40" height="40"
                         role="presentation"> Овощной прилавок
                 </a>
-                <a href="drairy"><img
+                <a href="dairy"><img
                         srcset="https://yastatic.net/avatars/get-grocery-goods/2750890/7e196d537e5b46d79062a2ed5dfc4ccd/40x40-webp 1x,https://yastatic.net/avatars/get-grocery-goods/2750890/7e196d537e5b46d79062a2ed5dfc4ccd/80x80-webp 2x"
                         src="https://yastatic.net/avatars/get-grocery-goods/2750890/7e196d537e5b46d79062a2ed5dfc4ccd/40x40-webp"
                         decoding="async" loading="eager" alt="Молочный прилавок" class="i1y1fbtp" width="40" height="40"
                         role="presentation"> Молочный прилавок
 
                 </a>
-                <a href="sweets">
+                <a href="bakery">
                     <img srcset="https://yastatic.net/avatars/get-grocery-goods/2750890/8bb1188be474444eba935dc81ed58da3/40x40-webp 1x,https://yastatic.net/avatars/get-grocery-goods/2750890/8bb1188be474444eba935dc81ed58da3/80x80-webp 2x"
                         src="https://yastatic.net/avatars/get-grocery-goods/2750890/8bb1188be474444eba935dc81ed58da3/40x40-webp"
                         decoding="async" loading="eager" alt="Булочная" class="i1y1fbtp" width="40" height="40"
                         role="presentation"> Булочная
 
                 </a>
-                <a href="meat-fish"><img
+                <a href="drinks"><img
                         srcset="https://yastatic.net/avatars/get-grocery-goods/2750890/4f6a267fd6db40bc9ca316f035b976f2/40x40-webp 1x,https://yastatic.net/avatars/get-grocery-goods/2750890/4f6a267fd6db40bc9ca316f035b976f2/80x80-webp 2x"
                         src="https://yastatic.net/avatars/get-grocery-goods/2750890/4f6a267fd6db40bc9ca316f035b976f2/40x40-webp"
                         decoding="async" loading="eager" alt="Вода и напитки" class="i1y1fbtp" width="40" height="40"
                         role="presentation"> Вода и напитки
 
                 </a>
-                <a href="frozen">
+                <a href="sweets">
                     <img srcset="https://yastatic.net/avatars/get-grocery-goods/2750890/c6b09b3a8e784154ac2da9f300ca0816/40x40-webp 1x,https://yastatic.net/avatars/get-grocery-goods/2750890/c6b09b3a8e784154ac2da9f300ca0816/80x80-webp 2x"
                         src="https://yastatic.net/avatars/get-grocery-goods/2750890/c6b09b3a8e784154ac2da9f300ca0816/40x40-webp"
                         decoding="async" loading="eager" alt="Сладкое и снеки" class="i1y1fbtp" width="40" height="40"
@@ -54,14 +54,14 @@
 
 
                 </a>
-                <a href="healthy-living">
+                <a href="meat-fish">
                     <img srcset="https://yastatic.net/avatars/get-grocery-goods/2750890/3201a7d60b5642acafe22e44174815ea/40x40-webp 1x,https://yastatic.net/avatars/get-grocery-goods/2750890/3201a7d60b5642acafe22e44174815ea/80x80-webp 2x"
                         src="https://yastatic.net/avatars/get-grocery-goods/2750890/3201a7d60b5642acafe22e44174815ea/40x40-webp"
                         decoding="async" loading="eager" alt="Мясо, птица, рыба" class="i1y1fbtp" width="40" height="40"
                         role="presentation"> Мясо, птица, рыба
 
                 </a>
-                <a href="grocery">
+                <a href="frozen">
                     <img srcset="https://yastatic.net/avatars/get-grocery-goods/2750890/a9bafdc7c58b487f957b1f99e639e132/40x40-webp 1x,https://yastatic.net/avatars/get-grocery-goods/2750890/a9bafdc7c58b487f957b1f99e639e132/80x80-webp 2x"
                         src="https://yastatic.net/avatars/get-grocery-goods/2750890/a9bafdc7c58b487f957b1f99e639e132/40x40-webp"
                         decoding="async" loading="eager" alt="Заморозка" class="i1y1fbtp" width="40" height="40"

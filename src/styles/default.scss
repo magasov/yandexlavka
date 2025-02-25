@@ -11,3 +11,9 @@
     max-width: 1564px;
     margin: 0 auto;
 }
+
+.home {
+    display: flex; 
+    gap: 50px;
+    min-height: calc(100vh - 80px);
+}

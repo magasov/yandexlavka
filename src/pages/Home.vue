@@ -15,9 +15,5 @@ import Main from '@/components/Main.vue';
 </script>
 
 <style lang="scss" scoped>
-    .home {
-        display: flex; 
-        gap: 50px;
-        min-height: calc(100vh - 80px);
-    }
+    
 </style>

@@ -1,65 +1,42 @@
 <template>
     <div class="home container">
-     <Catalog/>
-     <main>
-         <div class="containerItem">
-             <h1>Мясо, рыба и курица</h1>
-             <div class="mainOther">
-                 <a v-for="(item, index) in items" :key="index" href="#">
-                     <div class="cardOther">
-                         <div class="imgOther">
-                             <img :src="item.image" alt="#">
-                         </div>
-                         <div class="discriptionOther">
-                             <h3>{{ item.price }}</h3>
-                             <p>{{ item.description }}</p>
-                             <span>{{ item.weight }}</span>
-                         </div>
-                         <div class="buttonOther">
-                             <button>В корзину</button>
-                         </div>
-                     </div>
-                 </a>
-             </div>
-         </div>
-     </main>
-     <Cart/>
+      <Catalog/>
+      <main>
+        <div class="containerItem">
+          <h1>Мясо, рыба и курица</h1>
+          <div class="mainOther">
+            <a v-for="(item, index) in meatFishItems" :key="index" href="#">
+              <div class="cardOther">
+                <div class="imgOther">
+                  <img :src="item.image" alt="#">
+                </div>
+                <div class="discriptionOther">
+                  <h3>{{ item.price }}</h3>
+                  <p>{{ item.description }}</p>
+                  <span>{{ item.weight }}</span>
+                </div>
+                <div class="buttonOther">
+                  <button>В корзину</button>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </main>
+      <Cart/>
     </div>
- </template>
- 
- <script setup>
- import { ref } from 'vue';
- import Cart from "@/components/Cart.vue";
- import Catalog from "../components/Catalog.vue";
+  </template>
   
- 
- const items = ref([
-     {
-         image: "https://yastatic.net/avatars/get-grocery-goods/2888787/aa0bac94-59fc-4228-bf03-4c3b11e4862b/928x928-webp",
-         description: "Мякоть бедра цыплёнка-бройлера с овощами",
-         weight: "700 г",
-         price: "314₽",
-     },
-     {
-         image: "https://yastatic.net/avatars/get-grocery-goods/2998515/940a6cf8-84ce-45b3-9cb3-db598a6c402b/928x928-webp",
-         description: "Голень куриная «Ферма Евгения Рошаля» охлаждённая",
-         weight: "600 г",
-         price: "233₽",
-     },
-     {
-         image: "https://yastatic.net/avatars/get-grocery-goods/2805921/fbd9102a-853c-4227-a185-9261042a8f90/928x928-webp",
-         description: "Печень цыплёнка-бройлера «Троекурово»",
-         weight: "500 г",
-         price: "130₽",
-     },
-     {
-         image: "https://yastatic.net/avatars/get-grocery-goods/2750890/80649eac-ab27-4b86-a36a-bee38956cc8f/928x928-webp",
-         description: "Стейкбургер с чёрным перцем «Из Лавки»",
-         weight: "360 г",
-         price: "251₽",
-     },
-    ]);
- </script>
+  <script setup>
+  import { useProductsStore } from '../stores/counter.js';
+  import { computed } from 'vue';
+  import Cart from "@/components/Cart.vue";
+  import Catalog from "../components/Catalog.vue";
+  
+  const productsStore = useProductsStore();
+  const meatFishItems = computed(() => productsStore.getProductsByCategory('meatFish'));
+  </script>
+  
  
  <style lang="scss" >
  .containerItem{

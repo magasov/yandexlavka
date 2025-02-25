@@ -1,77 +1,41 @@
 <template>
     <div class="home container">
-     <Catalog/>
-     <main>
-         <div class="containerItem">
-             <h1>Вода</h1>
-             <div class="mainOther">
-                 <a v-for="(item, index) in items" :key="index" href="#">
-                     <div class="cardOther">
-                         <div class="imgOther">
-                             <img :src="item.image" alt="#">
-                         </div>
-                         <div class="discriptionOther">
-                             <h3>{{ item.price }}</h3>
-                             <p>{{ item.description }}</p>
-                             <span>{{ item.weight }}</span>
-                         </div>
-                         <div class="buttonOther">
-                             <button>В корзину</button>
-                         </div>
-                     </div>
-                 </a>
-             </div>
-         </div>
-     </main>
-     <Cart/>
+      <Catalog/>
+      <main>
+        <div class="containerItem">
+          <h1>Вода</h1>
+          <div class="mainOther">
+            <a v-for="(item, index) in drinksItems" :key="index" href="#">
+              <div class="cardOther">
+                <div class="imgOther">
+                  <img :src="item.image" alt="#">
+                </div>
+                <div class="discriptionOther">
+                  <h3>{{ item.price }}</h3>
+                  <p>{{ item.description }}</p>
+                  <span>{{ item.weight }}</span>
+                </div>
+                <div class="buttonOther">
+                  <button>В корзину</button>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </main>
+      <Cart/>
     </div>
- </template>
- 
- <script setup>
- import { ref } from 'vue';
- import Cart from "@/components/Cart.vue";
- import Catalog from "../components/Catalog.vue";
+  </template>
   
- 
- const items = ref([
-     {
-         image: "https://yastatic.net/avatars/get-grocery-goods/2783132/2bba3542-52d7-4b95-8ec8-7bac303f1b87/464x464-webp",
-         description: "Вода негазированная Горная природная питьевая",
-         weight: "1,5 л",
-         price: "41₽",
-     },
-     {
-         image: "https://yastatic.net/avatars/get-grocery-goods/2783132/616795ca-9ea3-435a-b7f3-b55f0203029e/928x928-webp",
-         description: "Вода минеральная газированная природная питьевая",
-         weight: "1,5 л",
-         price: "41₽",
-     },
-     {
-         image: "https://yastatic.net/avatars/get-grocery-goods/2750890/8ab55f6e-0172-4696-8b1f-35d3b5ce0a6c/928x928-webp",
-         description: "Вода детская с рождения негазированная",
-         weight: "1,5 л",
-         price: "38₽",
-     },
-     {
-         image: "https://yastatic.net/avatars/get-grocery-goods/2783132/4ef1d7f2-3902-410a-b100-6858e7fddd38/928x928-webp",
-         description: "Вода негазированная Горная природная питьевая",
-         weight: "5 л",
-         price: "90₽",
-     },
-     {
-         image: "https://yastatic.net/avatars/get-grocery-goods/2750890/6a5822f6-1349-4dbc-a640-7a84cde731cd/928x928-webp",
-         description: "Вода минеральная лечебно-столовая Borjomi газированная",
-         weight: "750 мл",
-         price: "114₽",
-     },
-     {
-         image: "https://yastatic.net/avatars/get-grocery-goods/2783132/0579855b-67d5-4e03-8743-d7f768ea7a26/928x928-webp",
-         description: "Вода минеральная Donat Mg газированная",
-         weight: "1 л",
-         price: "134₽",
-     },
-    ]);
- </script>
+  <script setup>
+  import { useProductsStore } from '../stores/counter.js';
+  import { computed } from 'vue';
+  import Cart from "@/components/Cart.vue";
+  import Catalog from "../components/Catalog.vue";
+  
+  const productsStore = useProductsStore();
+  const drinksItems = computed(() => productsStore.getProductsByCategory('drinks'));
+  </script>
  
  <style lang="scss" >
  .containerItem{

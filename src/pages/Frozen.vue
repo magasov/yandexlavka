@@ -1,71 +1,42 @@
 <template>
     <div class="home container">
-     <Catalog/>
-     <main>
-         <div class="containerItem">
-             <h1>Эскимо и батончики</h1>
-             <div class="mainOther">
-                 <a v-for="(item, index) in items" :key="index" href="#">
-                     <div class="cardOther">
-                         <div class="imgOther">
-                             <img :src="item.image" alt="#">
-                         </div>
-                         <div class="discriptionOther">
-                             <h3>{{ item.price }}</h3>
-                             <p>{{ item.description }}</p>
-                             <span>{{ item.weight }}</span>
-                         </div>
-                         <div class="buttonOther">
-                             <button>В корзину</button>
-                         </div>
-                     </div>
-                 </a>
-             </div>
-         </div>
-     </main>
-     <Cart/>
+      <Catalog/>
+      <main>
+        <div class="containerItem">
+          <h1>Эскимо и батончики</h1>
+          <div class="mainOther">
+            <a v-for="(item, index) in frozenItems" :key="index" href="#">
+              <div class="cardOther">
+                <div class="imgOther">
+                  <img :src="item.image" alt="#">
+                </div>
+                <div class="discriptionOther">
+                  <h3>{{ item.price }}</h3>
+                  <p>{{ item.description }}</p>
+                  <span>{{ item.weight }}</span>
+                </div>
+                <div class="buttonOther">
+                  <button>В корзину</button>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </main>
+      <Cart/>
     </div>
- </template>
- 
- <script setup>
- import { ref } from 'vue';
- import Cart from "@/components/Cart.vue";
- import Catalog from "../components/Catalog.vue";
+  </template>
   
- 
- const items = ref([
-     {
-         image: "https://yastatic.net/avatars/get-grocery-goods/2756334/18c10bb1-bd3b-4fda-8ca8-665d50b35cc8/928x928-webp",
-         description: "Мороженое молочное Snickers с карамелью и арахисом в глазури эскимо",
-         weight: "65 г",
-         price: "104₽",
-     },
-     {
-         image: "https://yastatic.net/avatars/get-grocery-goods/2750890/9cfabe00-127c-449b-81d9-61fb9126d44f/928x928-webp",
-         description: "Мороженое молочное Bounty в глазури эскимо",
-         weight: "65 г",
-         price: "114₽",
-     },
-     {
-         image: "https://yastatic.net/avatars/get-grocery-goods/2805921/e67e608b-dd76-4015-981e-fe3b3a923bd5/928x928-webp",
-         description: "Мороженое «Магнат» манго и красные ягоды эскимо",
-         weight: "74 г",
-         price: "129₽",
-     },
-     {
-         image: "https://yastatic.net/avatars/get-grocery-goods/2805921/4c013f24-f29a-4d81-a630-f8a001e19107/928x928-webp",
-         description: "Мороженое Эkzo дрaгонфрут-гуанабана эскимо",
-         weight: "70 г",
-         price: "76₽",
-     },
-     {
-         image: "https://yastatic.net/avatars/get-grocery-goods/2756334/3715afbb-3546-4971-9950-1df8c35a6764/464x464-webp",
-         description: "Мороженое ванильное Milka с молочным шоколадом в глазури эскимо",
-         weight: "62 г",
-         price: "121₽",
-     },
-    ]);
- </script>
+  <script setup>
+  import { useProductsStore } from '../stores/counter.js';
+  import { computed } from 'vue';
+  import Cart from "@/components/Cart.vue";
+  import Catalog from "../components/Catalog.vue";
+  
+  const productsStore = useProductsStore();
+  const frozenItems = computed(() => productsStore.getProductsByCategory('frozen'));
+  </script>
+  
  
  <style lang="scss" >
  .containerItem{

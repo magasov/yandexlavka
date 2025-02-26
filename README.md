@@ -17,6 +17,10 @@
     </div>
 </div>
 
+## Gallery Site
+
+   <img src="./src/assets/mysite.png" alt="Gallery">
+
 ## Project Setup
 
 ```sh

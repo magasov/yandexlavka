@@ -21,13 +21,17 @@
 
    <img src="./src/assets/mysite.png" alt="Gallery">
 
-## Stack
+## Стэк
 
-- **Vue.js <img src="https://skillicons.dev/icons?i=vue" alt="vue"> **: для создания пользовательского интерфейса
-- **Pinia**: для управления состоянием
-- **Vue Router**: для маршрутизации
-- **Sass/SCSS**: для стилизации
-- **Vite**: для сборки и горячей перезагрузки
+<div style="display: flex; flex-direction: column; align-items: center;">
+  <p>
+    <strong>Vue.js</strong> <img src="https://skillicons.dev/icons?i=vue" alt="vue" height="30"> <br>
+    <strong>Pinia</strong> <img src="https://skillicons.dev/icons?i=pinia" alt="pinia" height="30"> <br>
+    <strong>Vue Router</strong> <img src="https://skillicons.dev/icons?i=vue-router" alt="vue-router" height="30"> <br>
+    <strong>Sass/SCSS</strong> <img src="https://skillicons.dev/icons?i=sass" alt="sass" height="30"> <br>
+    <strong>Vite</strong> <img src="https://skillicons.dev/icons?i=vite" alt="vite" height="30">
+  </p>
+</div>
 
 ## Project Setup
 

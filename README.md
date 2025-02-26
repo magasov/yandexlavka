@@ -17,9 +17,17 @@
     </div>
 </div>
 
-## Gallery Site
+## Gallery
 
    <img src="./src/assets/mysite.png" alt="Gallery">
+
+## Stack
+
+- **Vue.js https://skillicons.dev/icons?i=vue**: для создания пользовательского интерфейса
+- **Pinia**: для управления состоянием
+- **Vue Router**: для маршрутизации
+- **Sass/SCSS**: для стилизации
+- **Vite**: для сборки и горячей перезагрузки
 
 ## Project Setup
 

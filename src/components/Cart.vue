@@ -1,67 +1,87 @@
 <template>
-    <div class="cart">
-      <div class="cart__main">
-        <h3>Корзина</h3>
-  
-        <div v-if="cartItems.length === 0" class="cart__none">
-          <img src="https://yastatic.net/s3/lavka-web/public/assets/images/emptyCart@2x.png" width="100" alt="" loading="eager">
-          <h3>В вашей корзине пока пусто</h3>
-          <p>Тут появятся товары, которые вы закажете.</p>
-        </div>
-  
-        <div class="cart__yes" v-else>
-          <div v-for="item in cartItems" :key="item.id" class="cart__item">
-            <div class="cart__item-data">
-              <img :src="item.image" alt="">
-              <div class="title_data">
-                <p>{{item.description}}</p>
-                <div class="priceAndMl">
-                  <p>{{ item.price }}</p>
-                  <span>·</span>
-                  <span>{{ item.weight }}</span>
-                </div>
+  <div class="cart">
+    <div class="cart__main">
+      <h3>Корзина</h3>
+
+      <div v-if="cartItems.length === 0" class="cart__none">
+        <img src="https://yastatic.net/s3/lavka-web/public/assets/images/emptyCart@2x.png" width="100" alt="" loading="eager">
+        <h3>В вашей корзине пока пусто</h3>
+        <p>Тут появятся товары, которые вы закажете.</p>
+      </div>
+
+      <div class="cart__yes" v-else>
+        <div v-for="item in cartItems" :key="item.id" class="cart__item">
+          <div class="cart__item-data">
+            <img :src="item.image" alt="">
+            <div class="title_data">
+              <p>{{ item.description }}</p>
+              <div class="priceAndMl">
+                <p>{{ item.price }}</p>
+                <span>·</span>
+                <span>{{ item.weight }}</span>
               </div>
             </div>
-            <button @click="removeFromCart(item.id)">Удалить</button>
+          </div>
+          <div class="counts">
+            <div class="buttons" @click="updateQuantity(item.id, -1)">-</div>
+            <p>{{ item.quantity }}</p>
+            <div class="buttons" @click="updateQuantity(item.id, 1)">+</div>
           </div>
         </div>
-  
-        <div class="count">
-          <p>Товаров в корзине:</p>
-          <span>{{ cartItems.length }}</span>
-        </div>
+      </div>
+
+      <div class="count">
+        <p>Товаров в корзине:</p>
+        <span>{{ cartItems.length }}</span>
       </div>
     </div>
-  </template>
+  </div>
+</template>
+
   
-  <script setup>
-  import { ref, onMounted } from 'vue';
-  
-  const cartItems = ref([]);
-  
-  // Загрузка корзины из localStorage
-  const loadCart = () => {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cartItems.value = cart;
-  };
-  
-  // Удаление товара из корзины
-  const removeFromCart = (itemId) => {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart = cart.filter((item) => item.id !== itemId);
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const cartItems = ref([]);
+
+const loadCart = () => {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  cartItems.value = cart;
+};
+
+const updateQuantity = (itemId, amount) => {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const item = cart.find((item) => item.id === itemId);
+
+  if (item) {
+    item.quantity += amount;
+
+    if (item.quantity <= 0) {
+      cart.splice(cart.indexOf(item), 1);
+    }
+
     localStorage.setItem('cart', JSON.stringify(cart));
-    loadCart(); // Обновляем состояние корзины
-  };
-  
-  // Загружаем корзину при монтировании компонента
-  onMounted(() => {
     loadCart();
-  });
-  </script>
+  }
+};
+
+const removeFromCart = (itemId) => {
+  const cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const updatedCart = cart.filter((item) => item.id !== itemId);
+  localStorage.setItem('cart', JSON.stringify(updatedCart));
+  loadCart();
+};
+
+onMounted(() => {
+  loadCart();
+});
+</script>
+
   
   <style lang="scss" scoped>
   .cart {
     flex: 2;
+    margin-left: 50px;
     height: max-content;
     position: sticky;
     height: calc(100vh - 80px);
@@ -72,6 +92,7 @@
       display: flex;
       padding: 20px 0;
       flex-direction: column;
+      gap: 30px;
   
       h3 {
         font-weight: 900;
@@ -111,8 +132,9 @@
   
       .cart__item {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+        gap: 10px;
         padding: 10px 0;
   
         &-info {
@@ -131,17 +153,26 @@
             color: #9e9b98;
           }
         }
-  
-        button {
-          background-color: #ff4444;
-          color: white;
-          border: none;
-          padding: 5px 10px;
-          border-radius: 5px;
-          cursor: pointer;
-  
-          &:hover {
-            background-color: #cc0000;
+        
+        .counts {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          border-radius: 8px;
+          padding: 2px 10px;
+          background: #EFEEED;
+
+          .buttons {
+            cursor: pointer;
+            border: 0;
+            font-weight: 500;
+            font-size: 20px;
+            padding: 0 5px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
           }
         }
       }
@@ -154,7 +185,6 @@
         img {
           width: 48px;
           height: 48px;
-          padding:  4px;
           border-radius: 10px;
           background: #f8f7f5;
         }

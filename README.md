@@ -25,11 +25,11 @@
 
 <div style="display: flex; flex-direction: column; align-items: center;">
   <p>
-    <strong>Vue.js</strong> <img src="https://skillicons.dev/icons?i=vue" alt="vue" height="30"> <br>
-    <strong>Pinia</strong> <img src="https://skillicons.dev/icons?i=pinia" alt="pinia" height="30"> <br>
-    <strong>Vue Router</strong> <img src="https://skillicons.dev/icons?i=vue-router" alt="vue-router" height="30"> <br>
-    <strong>Sass/SCSS</strong> <img src="https://skillicons.dev/icons?i=sass" alt="sass" height="30"> <br>
-    <strong>Vite</strong> <img src="https://skillicons.dev/icons?i=vite" alt="vite" height="30">
+    <strong>Vue.js</strong> <img src="https://skillicons.dev/icons?i=vue" alt="vue" height="20"> <br>
+    <strong>Pinia</strong> <img src="https://skillicons.dev/icons?i=pinia" alt="pinia" height="20"> <br>
+    <strong>Vue Router</strong> <img src="https://user-images.githubusercontent.com/7110136/29002858-a09570d2-7ab4-11e7-8faa-5dd6d4458b0d.png" alt="vue-router" height="20"> <br>
+    <strong>Sass/SCSS</strong> <img src="https://skillicons.dev/icons?i=sass" alt="sass" height="20"> <br>
+    <strong>Vite</strong> <img src="https://skillicons.dev/icons?i=vite" alt="vite" height="20">
   </p>
 </div>
 

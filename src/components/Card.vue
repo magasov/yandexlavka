@@ -43,6 +43,7 @@ const addToCart = (item) => {
     cart.push({ ...item, quantity: 1 });
   }
 
+  window.location.reload()
   localStorage.setItem('cart', JSON.stringify(cart));
 };
 </script>

@@ -21,9 +21,9 @@
 
    <img src="./src/assets/mysite.png" alt="Gallery">
 
-## Demo
+## Demo click
 
-[![Demo](./src/assets/youtube.png)](https://www.youtube.com/embed/your-video-id "Click!")
+[![Demo](./src/assets/youtube.png)](https://www.youtube.com/watch?v=lgsXh261pss "Click!")
 
 ## Стэк
 

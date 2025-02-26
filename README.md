@@ -23,7 +23,7 @@
 
 ## Stack
 
-- **Vue.js https://skillicons.dev/icons?i=vue**: для создания пользовательского интерфейса
+- **Vue.js <img src="https://skillicons.dev/icons?i=vue" alt="vue"> **: для создания пользовательского интерфейса
 - **Pinia**: для управления состоянием
 - **Vue Router**: для маршрутизации
 - **Sass/SCSS**: для стилизации

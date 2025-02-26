@@ -23,9 +23,9 @@
 
 ## Demo
 
-  <iframe width="560" height="315" src="https://youtu.be/lgsXh261pss?si=ga397HMT1OHgjO4r" frameborder="0" allowfullscreen></iframe>
+[![Demo](./src/assets/youtube.png)](https://www.youtube.com/embed/your-video-id "Click!")
 
-## Stack
+## Стэк
 
 <div style="display: flex; flex-direction: column; align-items: center;">
   <p>

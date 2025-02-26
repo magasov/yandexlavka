@@ -270,6 +270,46 @@ export const useProductsStore = defineStore('products', () => {
           "price": "235₽"
         }
       ]
+    },
+    {
+      "category": "vegetables",
+      "items": [
+        {
+          id: 35,
+          image: "https://yastatic.net/avatars/get-grocery-goods/2783132/b1d82b7b-ca09-41fd-9bf5-00b8a176572e/464x464-webp",
+            price: "174₽",
+            description: "Мандари­ны Сатцу­ма Из Лавки",
+            weight: "600 г"
+        },
+        {
+          id: 36,
+          image: "https://yastatic.net/avatars/get-grocery-goods/2750890/a0f8c627-1b06-4bf4-9478-d2d10291a1df/928x928-webp",
+            price: "195 ₽",
+            description: "Мандарины Марроко",
+            weight: "1 кг"
+        },	
+        {
+          id: 37,
+          image: "https://yastatic.net/avatars/get-grocery-goods/2783132/2e107bc0-fea7-4733-bce4-3645bc5396fa/928x928-webp",
+            price: "125 ₽",
+            description: "Мандарины с листочком",
+            weight: "500 г"
+        },
+        {
+          id: 38,
+          image: "https://yastatic.net/avatars/get-grocery-goods/2888787/4d197700-6e23-4d92-b36e-a800ef145c86/928x928-webp",
+            price: "174 ₽",
+            description: "Мандарины Турция",
+            weight: "1 кг"
+        },
+        {
+          id: 39,
+          image: "https://yastatic.net/avatars/get-grocery-goods/2750890/96a0a695-04c3-43b6-91ac-11d116eb8390/464x464-webp",
+            price: "181 ₽",
+            description: "Апельсины сладкие",
+            weight: "500 г"
+        },
+    ]
     }
   ]);
 

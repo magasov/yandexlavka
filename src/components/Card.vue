@@ -1,0 +1,108 @@
+<template>
+  <div class="mainOther">
+    <a v-for="item in items" :key="item.id" href="#">
+      <div class="cardOther">
+        <div class="imgOther">
+          <img :src="item.image" :alt="item.description">
+        </div>
+        <div class="discriptionOther">
+          <h3>{{ item.price }} ₽</h3>
+          <p>{{ item.description }}</p>
+          <span>{{ item.weight }} г</span>
+        </div>
+        <div class="buttonOther">
+          <button @click="addToCart(item)">В корзину</button>
+        </div>
+      </div>
+    </a>
+  </div>
+</template>
+
+<script setup>
+import { defineProps } from 'vue';
+
+defineProps({
+  items: {
+    type: Array,
+    required: true,
+  },
+});
+
+const addToCart = (item) => {
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  const existingItem = cart.find((cartItem) => cartItem.id === item.id);
+
+  if (existingItem) {
+    existingItem.quantity += 1; 
+  } else {
+    cart.push({ ...item, quantity: 1 }); 
+  }
+
+  localStorage.setItem('cart', JSON.stringify(cart));
+  window.location.reload()
+};
+</script>
+  
+  <style lang="scss" scoped>
+  .cardOther {
+    flex: 1;
+    height: 390px;
+    background-color: #f8f7f5;
+    border-radius: 24px;
+    padding: 0 0 10px 0;
+    .discriptionOther {
+      padding: 0px 12px 16px;
+      height: 90px;
+      span {
+        font-size: 16px;
+        color: #9e9b98;
+      }
+      p {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+      h3 {
+        font-weight: 500;
+      }
+    }
+    .buttonOther {
+      background-color: white;
+      border: none;
+      border-radius: 16px;
+      width: 218px;
+      height: 48px;
+      margin: auto;
+      button {
+        width: 218px;
+        height: 48px;
+        font-weight: 400;
+        font-size: 16px;
+        border-radius: 16px;
+        border: none;
+        background-color: white;
+        cursor: pointer;
+        &:hover {
+          background-color: #f8f7f5;
+        }
+      }
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 24px 24px 0 0;
+    }
+  }
+  .mainOther {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 32px;
+    .cardOther {
+      &:hover {
+        background-color: hsla(30, 3%, 53%, 0.2);
+      }
+    }
+  }
+  </style>

@@ -1,25 +1,24 @@
 <template>
   <div class="mainOther">
-    <a v-for="item in items" :key="item.id" href="#">
-      <div class="cardOther">
-        <div class="imgOther">
-          <img :src="item.image" :alt="item.description">
-        </div>
-        <div class="discriptionOther">
-          <h3>{{ item.price }} ₽</h3>
-          <p>{{ item.description }}</p>
-          <span>{{ item.weight }} г</span>
-        </div>
-        <div class="buttonOther">
-          <button @click="addToCart(item)">В корзину</button>
-        </div>
+    <div v-for="item in items" :key="item.id" class="cardOther" @click="goToProductPage(item.id)">
+      <div class="imgOther">
+        <img :src="item.image" :alt="item.description">
       </div>
-    </a>
+      <div class="discriptionOther">
+        <h3>{{ item.price }} ₽</h3>
+        <p>{{ item.description }}</p>
+        <span>{{ item.weight }} г</span>
+      </div>
+      <div class="buttonOther">
+        <button @click.stop="addToCart(item)">В корзину</button>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
 import { defineProps } from 'vue';
+import { useRouter } from 'vue-router';
 
 defineProps({
   items: {
@@ -28,20 +27,26 @@ defineProps({
   },
 });
 
+const router = useRouter();
+
+const goToProductPage = (id) => {
+  router.push(`/product/${id}`);
+};
+
 const addToCart = (item) => {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   const existingItem = cart.find((cartItem) => cartItem.id === item.id);
 
   if (existingItem) {
-    existingItem.quantity += 1; 
+    existingItem.quantity += 1;
   } else {
-    cart.push({ ...item, quantity: 1 }); 
+    cart.push({ ...item, quantity: 1 });
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));
-  window.location.reload()
 };
 </script>
+
   
   <style lang="scss" scoped>
   .cardOther {

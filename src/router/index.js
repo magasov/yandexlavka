@@ -95,7 +95,7 @@ const router = createRouter({
       component: Urgent,
     },
     {
-      path: "/page",
+      path: "/product/:id",
       name: "Page",
       component: Page,
     },

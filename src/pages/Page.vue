@@ -1,110 +1,112 @@
 <template>
-
     <div class="mainPage">
-        <div class="containerPage">
-            <div class="containerNav">
-                <ol>
-                    <li>
-                        <a href="/">Главная</a>
-                    </li>
-                    <span>></span>
-                    <li>
-                        <a href="#">Предмет</a>
-                    </li>
-                </ol>
-            </div>
-            <div class="containerTitle">
-                <div class="titlePage">
-                    <h1>Хычины «Из Лавки» с картофелем и сыром замороженные <span>500 г</span></h1>  
-                </div>
-            </div>
-            <div class="containerMain">
-                <div class="containerLeft">
-                    <div class="mainImage">
-                        <img src="../assets/item/464x464-webp.webp" alt="#">
-                    </div>
-                    <div class="otherImage">
-                        <div class="miniImage"></div>
-                        <div class="miniImage"></div>
-                        <div class="miniImage"></div>
-                    </div>
-                </div>
-                <div class="containerRight">
-                    <div class="itemPrice">
-                        <span>290 ₽</span> <button>В корзину</button>
-                    </div>
-                    
-                    <div class="weight1">
-                            <h1>На 100 г</h1>
-                    </div>
-                    <div class="itemWeight">
-                        <div class="weight2">
-                            <p>251</p>
-                            <span>ккал</span>
-                        </div>
-                        <div class="weight2">
-                            <p>10</p>
-                            <span>белки</span>
-                        </div>
-                        <div class="weight2">
-                            <p>7</p>
-                            <span>жиры</span>
-                        </div>
-                        <div class="weight2">
-                            <p>37</p>
-                            <span>углеводы</span>
-                        </div>
-                    </div>
-                   
-                    <div class="aboutItem">
-                        <h1>О товаре</h1>
-                        <div class="descriptionItem">
-                            <h3>Описание</h3>
-                            <p>Эти хычины приготовили по традиционному рецепту балкарцев — начинки в них больше, чем теста. Внутрь положили домашний кабардино-балкарский сыр и картофель, а затем вручную тонко раскатали тесто.</p>
-                        </div>
-                        <div class="structureItem">
-                            <h3>Состав</h3>
-                            <p>Мука пшеничная высший сорт, картофель отварной, сыр домашний рассольный (молоко цельное, молоко обезжиренное, соль пищевая, краситель Бета-каротин, закваска молочнокислых микроорганизмов, молокосвертывающий ферментный препарат микробного происхождения), вода питьевая, соль поваренная пищевая.</p>
-                        </div>
-                        <div class="shelflifeItem">
-                            <h3>Срок годности, условия хранения</h3>
-                            <p>360 д., ниже -18C˚</p>
-                        </div>
-                        <div class="countryItem">
-                            <h3>Производитель, страна</h3>
-                            <p>ИП Узденова Лейля Мухамедовна, Россия</p>
-                        </div>
-                        <div class="brandItem">
-                            <h3>Бренд</h3>
-                            <p>Из Лавки</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="containerPage">
+        <div class="containerNav">
+          <ol>
+            <li>
+              <a href="/">Главная</a>
+            </li>
+            <span>></span>
+            <li>
+              <a href="#">Предмет</a>
+            </li>
+          </ol>
         </div>
-    </div>
-    <div class="containerOther">
-        <h1>Может, ещё кое-что?</h1>
-        <div class="mainOther">
-            <a href="#">
-                <div class="cardOther">
-                    <div class="imgOther">
-                        <img src="../assets/item/card.webp" alt="#">
-                    </div>
-                    <div class="discriptionOther">
-                        <h3>126 ₽</h3>
-                        <p>Смесь для приготовления кофе Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis rerum magni eos nihil placeat laudantium saepe ab, harum at voluptate labore blanditiis alias ea dolor deserunt velit fugit quam quia.</p>
-                        <span>360 г</span>
-                    </div>
-                    <div class="buttonOther">
-                        <button>В корзину</button>
-                    </div>
-                </div>
-            </a>
+        <div class="containerTitle">
+          <div class="titlePage">
+            <h1>{{ currentProduct.description }} <span>{{ currentProduct.weight }}</span></h1>  
+          </div>
         </div>
+        <div class="containerMain">
+          <div class="containerLeft">
+            <div class="mainImage">
+              <img :src="currentProduct.image" alt="Product Image">
+            </div>
+            <div class="otherImage">
+              <div class="miniImage" v-for="i in 3" :key="i"></div>
+            </div>
+          </div>
+          <div class="containerRight">
+            <div class="itemPrice">
+              <span>{{ currentProduct.price }}</span> 
+              <button>В корзину</button>
+            </div>
+            <div class="weight1">
+              <h1>На 100 г</h1>
+            </div>
+            <div class="itemWeight">
+              <div class="weight2">
+                <p>251</p>
+                <span>ккал</span>
+              </div>
+              <div class="weight2">
+                <p>10</p>
+                <span>белки</span>
+              </div>
+              <div class="weight2">
+                <p>7</p>
+                <span>жиры</span>
+              </div>
+              <div class="weight2">
+                <p>37</p>
+                <span>углеводы</span>
+              </div>
+            </div>
+            <div class="aboutItem">
+              <h1>О товаре</h1>
+              <div class="descriptionItem">
+                <h3>Описание</h3>
+                <p>{{ currentProduct.description }}</p>
+              </div>
+              <div class="structureItem">
+                <h3>Состав</h3>
+                <p>Мука пшеничная высший сорт, картофель отварной, сыр домашний рассольный...</p>
+              </div>
+              <div class="shelflifeItem">
+                <h3>Срок годности, условия хранения</h3>
+                <p>360 д., ниже -18C˚</p>
+              </div>
+              <div class="countryItem">
+                <h3>Производитель, страна</h3>
+                <p>ИП Узденова Лейля Мухамедовна, Россия</p>
+              </div>
+              <div class="brandItem">
+                <h3>Бренд</h3>
+                <p>Из Лавки</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</template>
+  </template>
+  
+  <script>
+  import { useProductsStore } from '../stores/counter.js'; 
+  
+  export default {
+    name: 'Page',
+    data() {
+      const store = useProductsStore();
+      const productId = this.$route.params.id;
+  
+      // Перебор всех продуктов, чтобы найти тот, который совпадает с id
+      const currentProduct = store.products
+        .flatMap(product => product.items) // Преобразует все массивы в один
+        .find(item => item.id === Number(productId));
+  
+      if (!currentProduct) {
+        this.$router.push('/404'); 
+      }
+  
+      return {
+        currentProduct
+      };
+    }
+  }
+  </script>
 
+  
 
 <style scoped lang="scss">
     .containerOther{
@@ -178,6 +180,11 @@
         height: 464px;
         border-radius: 40px;
         background-color: hsla(30, 35%, 53%, 0.1);
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
     .containerRight{
         width: 100%;
@@ -307,8 +314,3 @@
     }
 </style>
 
-<script>
-export default {
-    name: 'Page'
-}
-</script>

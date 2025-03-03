@@ -554,12 +554,11 @@ header {
   .btn_close {
     min-width: 200px;
     width: 200px;
-    height: 56px;
+    padding: 15px 0;
     background: #fce000;
     border: 1px solid #ccc;
     border-radius: 10px;
     cursor: pointer;
-    margin-top: 20px;
     border-radius: 16px;
     &:hover {
       background: #e7e7e7;

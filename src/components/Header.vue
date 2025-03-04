@@ -39,7 +39,25 @@
           ></path>
         </svg>
       </span>
-      <input type="text" placeholder="Найти в Вай-Лавке" />
+      <input
+        type="text"
+        placeholder="Найти в Вай-Лавке"
+        v-model="searchQuery"
+        @input="filterProducts"
+        @focus="isSearchFocused = true"
+        @blur="isSearchFocused = false"
+      />
+      <div class="search-results" v-if="searchQuery">
+            <div v-for="product in filteredProducts" :key="product.id" class="product">
+              <router-link :to="`/product/${product.id}`">
+                <img :src="product.image" alt="product" />
+              <div class="product-info">
+                <div class="product-name">{{ product.description }}</div>
+                <div class="product-price">{{ product.price }}</div>
+              </div>
+              </router-link>
+            </div>
+          </div>
     </div>
     <div class="catalog btnadress">
       <span>
@@ -167,13 +185,20 @@
 </template>
 
 <script>
+import router from '@/router';
+import { useProductsStore } from '@/stores/counter';
 export default {
   data() {
+ 
+
     return {
       isAuthModalOpen: false,
       phone: "",
       isUserLoggedIn: false,
-
+      searchQuery: "",
+      filteredProducts: [],
+      isSearchFocused: false,
+      
       isCatalogModalOpen: false,
       products: [
         {
@@ -272,10 +297,18 @@ export default {
 
     };
   },
+
   mounted() {
     this.isUserLoggedIn = localStorage.getItem("user") !== null;
   },
   methods: {
+    filterProducts() {
+      const store = useProductsStore();
+      const allProducts = store.products.flatMap(category => category.items);
+      this.filteredProducts = allProducts.filter(product =>
+        product.description.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
+    },
     toggleAuthModal() {
       if (this.isUserLoggedIn) {
         localStorage.removeItem("user");
@@ -303,6 +336,52 @@ export default {
 
 
 <style lang="scss" scoped>
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+
+  .product {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 8px;
+    }
+
+    .product-info {
+      flex: 1;
+
+      .product-name {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .product-price {
+        font-size: 12px;
+        color: #666;
+      }
+    }
+  }
+
+}
+
+
+
 header {
   display: flex;
   padding: 0 20px;
@@ -351,7 +430,7 @@ header {
       }
     }
   }
-
+ 
   .catalog {
     height: 48px;
     padding: 0 20px;

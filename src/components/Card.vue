@@ -7,7 +7,7 @@
       <div class="discriptionOther">
         <h3>{{ item.price }} ₽</h3>
         <p>{{ item.description }}</p>
-        <span>{{ item.weight }} г</span>
+        <span>{{ item.weight }}</span>
       </div>
       <div class="buttonOther">
         <button @click.stop="addToCart(item)">В корзину</button>

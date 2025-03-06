@@ -23,7 +23,7 @@
         @focus="isSearchFocused = true"
         @blur="isSearchFocused = false"
       />
-      <div class="search-results" v-if="searchQuery && isSearchFocused">
+      <div class="search-results" v-if="searchQuery ">
         <div v-for="product in filteredProducts" :key="product.id" class="product">
           <router-link 
             :to="`/product/${product.id}`"
@@ -202,8 +202,8 @@ export default {
     selectProduct() {
       setTimeout(() => {
         this.isSearchFocused = false;
-        this.searchQuery = ''; // Опционально: очищать поисковую строку
-      }, 100); // Задержка в 100мс
+        this.searchQuery = ''; 
+      }, 100); 
     },
 
     toggleAuthModal() {

@@ -24,7 +24,7 @@
         @blur="isSearchFocused = false"
       />
       <div class="search-results" v-if="searchQuery ">
-        <div v-for="product in filteredProducts" :key="product.id" class="product">
+        <div v-for="product in filteredProducts" :key="product.id" class="product-search">
           <router-link 
             :to="`/product/${product.id}`"
             @click="selectProduct"
@@ -329,6 +329,18 @@ header {
       &:focus {
         outline: none;
       }
+    }
+  }
+
+  .product-search {
+    a {
+      padding: 20px;
+      gap: 10px;
+      display: flex;
+    align-items: center;
+    img {
+      width: 50px;
+    }
     }
   }
  

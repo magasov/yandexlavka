@@ -1,9 +1,8 @@
 <template>
-     <!-- <h1>{{  }} <span>{{ currentProduct.weight }}</span></h1>   -->
     <div class="container__recipes">
         <div class="one_recipes">
             <div class="recipes__viedeo">
-                <video class="v1q7le2h" loop playsinline autoplay muted>
+                <video loop playsinline autoplay muted>
                     <source :src="currentProduct.video" type="video/mp4">
                 </video>
             </div>
@@ -43,22 +42,46 @@
             </div>
 
         </div>
+
+        <div class="two_recepies">
+            <div class="ingredients">
+                <h2>{{ currentProduct.ingredients.title }}</h2>
+                <p v-for="item in currentProduct.ingredients.items">{{ item }}</p>
+                <span>{{ currentProduct.ingredients.additional }}</span>
+            </div>
+        </div>
+
+        <div class="steps" v-for="item in currentProduct.steps">
+            <img :src="item.img" alt="ad">
+
+            <div class="steps__info">
+                <h2>Шаг {{ item.step }} из {{ currentProduct.steps.length }} </h2>
+                <div class="ingredients__desc">
+                    <span v-for="items in item.ingredients">{{ items }}</span>
+                </div>
+                <div class="steps_desc">
+                    {{ item.description }}
+                     </div>
+            </div>
+        </div>
     </div>
   </template>
   
   <script>
   import { useProductsStore } from '../stores/counter.js'; 
   
+  
   export default {
-    name: 'Page',
-    data() {
-      const store = useProductsStore();
-      const productId = this.$route.params.id;
-  
-      const currentProduct = store.products
-        .flatMap(product => product.recipes) 
-        .find(item => item.id === Number(productId));
-  
+      name: 'Page',
+      data() {
+        window.scrollTo(0,0)
+          const store = useProductsStore();
+          const productId = this.$route.params.id;
+          
+          const currentProduct = store.products
+          .flatMap(product => product.recipes) 
+          .find(item => item.id === Number(productId));
+          
       if (!currentProduct) {
         this.$router.push('/404'); 
       }
@@ -77,6 +100,9 @@
         max-width: 960px;
         font-family: 'Yandex Sans Text';
         margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
 
         .one_recipes {
             display: flex;
@@ -86,7 +112,7 @@
 
                 video {
                 border-radius: 30px;
-                height: 800px;
+                max-height: 800px;
                 }
             }
 
@@ -184,6 +210,60 @@
                             background: #dbdbdb;
                         }
                     }
+                }
+            }
+        }
+
+        .ingredients {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 30px;
+            border-radius: 30px;
+            background: #f8f7f5;
+
+            span {
+                margin: 5px 0 0 0;
+                color: #9e9b98;
+            }
+        }
+
+        .steps {
+            display: flex;
+            gap: 40px;
+            margin: 20px 0 0 0 ;
+            
+            img {
+                width: 50%;
+                height: 320px;
+                border-radius: 30px;
+            }
+
+            &__info {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                margin: 20px 0 0 0;
+
+                h2 {
+                    font-size: 30px;
+                    margin-bottom: 5px;
+                }
+
+                .ingredients__desc {
+                    display: flex;
+                    gap: 5px;
+                    flex-wrap: wrap;
+                }
+
+                span {
+                    color: #9e9b98;
+                    font-weight: 500;
+                }
+
+                .steps_desc {
+                    font-size: 18px;
                 }
             }
         }

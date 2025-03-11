@@ -28,7 +28,7 @@
           </div>
           <div class="containerRight">
             <div class="itemPrice">
-              <span>{{ currentProduct.price }}</span> 
+              <span>{{ currentProduct.price }} ₽</span> 
               <button>В корзину</button>
             </div>
             <div class="weight1">

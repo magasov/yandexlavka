@@ -15,6 +15,7 @@ import Pets from "@/pages/Pets.vue";
 import HomeGoods from "@/pages/HomeGoods.vue";
 import Urgent from "@/pages/Urgent.vue";
 import Page from "@/pages/Page.vue";
+import Recepts from "@/pages/Recepts.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -98,6 +99,11 @@ const router = createRouter({
       path: "/product/:id",
       name: "Page",
       component: Page,
+    },
+    {
+      path: "/recipes/:id",
+      name: "Recipes",
+      component: Recepts,
     },
   ],
 });

@@ -102,14 +102,14 @@
         <div class="lavkarecept">
             <h3>Рецепты Вай Лавки</h3>
             <div class="lavkarecept__card">
-                <div class="lavkarecepts">
+                <router-link :to="'/recipes'" class="lavkarecepts" > 
                     <div class="lavkarecepts__text">
                         <p>Персики-гриль с мороженым</p>
                         <span>15 мин</span>
                     </div>
                     <img src="https://yastatic.net/avatars/get-grocery-goods/2805921/c87023dc-e76d-4259-acab-f0f4ff7e060c/392x588?webp=true"
                         alt="card">
-                </div>
+                    </router-link>
                 <div class="lavkarecepts">
                     <div class="lavkarecepts__text">
                         <p>Мак энд чиз</p>

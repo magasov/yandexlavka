@@ -129,7 +129,7 @@ export default {
         { name: "Молоко", image: "https://yastatic.net/avatars/get-bunker/998550/584497888ffe6350bb66ec10dce02ec7ec5bf149/orig" },
         { name: "Кинза", image: "https://yastatic.net/avatars/get-bunker/50064/8fac952d8e8fb03a1d2110fada5ebf4aaca0eddd/orig" },
         { name: "Говядина", image: "https://yastatic.net/avatars/get-bunker/998550/05ef2d82088f84bae8b50a8614ca9a6c2b3df5c6/orig" },
-        { name: "Свинина", image: "https://yastatic.net/avatars/get-bunker/56833/76c7a269e952443be0b102c5e62f322c0564cc18/orig" },
+        // { name: "Свинина", image: "https://yastatic.net/avatars/get-bunker/56833/76c7a269e952443be0b102c5e62f322c0564cc18/orig" },
         { name: "Мёд", image: "https://yastatic.net/avatars/get-bunker/998550/befb4830e9f4d615546a56669895ec8757ceae68/orig" },
         { name: "Лук", image: "https://yastatic.net/avatars/get-bunker/998550/cf856e23a7d095442694904a7f2006961ad44849/orig" },
         { name: "Сахар", image: "https://yastatic.net/avatars/get-bunker/60661/f5d2abdbeb468020d71547095d24b3ed38f7b52d/orig" },

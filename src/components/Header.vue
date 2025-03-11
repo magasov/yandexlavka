@@ -1,6 +1,6 @@
 <template>
   <header>
-    <a href="/"><img src="../assets/icons/logo.svg" alt="logo" /></a>
+    <router-link :to="'/'"><img src="../assets/icons/logo.svg" alt="logo" /></router-li>
     <div class="catalog">
       <span>
         <svg class="i1rjkic7" width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

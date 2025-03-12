@@ -16,7 +16,7 @@
             <div class="title_data">
               <p>{{ item.description }}</p>
               <div class="priceAndMl">
-                <p>{{ item.price }}</p>
+                <p>{{ item.price }} ₽</p>
                 <span>·</span>
                 <span>{{ item.weight }}</span>
               </div>

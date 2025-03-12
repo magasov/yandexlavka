@@ -89,10 +89,11 @@
     data() {
       const store = useProductsStore();
       const productId = this.$route.params.id;
+      window.scrollTo(0,0)
+      
   
-      // Перебор всех продуктов, чтобы найти тот, который совпадает с id
       const currentProduct = store.products
-        .flatMap(product => product.items) // Преобразует все массивы в один
+        .flatMap(product => product.items) 
         .find(item => item.id === Number(productId));
   
       if (!currentProduct) {

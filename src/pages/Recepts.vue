@@ -35,8 +35,8 @@
 
                 <div class="categories__receptes">
                     <RouterLink>Все рецепты</RouterLink>
-                    <RouterLink>Десерты</RouterLink>
-                    <RouterLink>Фрукты и ягоды</RouterLink>
+                    <!-- <RouterLink>Десерты</RouterLink>
+                    <RouterLink>Фрукты и ягоды</RouterLink> -->
                     <RouterLink>За 15 минут</RouterLink>
                 </div>
             </div>

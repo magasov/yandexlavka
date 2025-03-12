@@ -228,7 +228,7 @@ export const useProductsStore = defineStore("products", () => {
           "author": "Редакция Лавки",
           "authorDescription": "Собираем интересные рецепты со всего света, а затем проверяем вместе с поварами и пробуем сами",
           "ingredients": {
-            "title": "Ингредиенты на 4 порции",
+            "title": "Ингредиенты на 5 порций",
             "items": [
               "Куриный бульон — 1.5 л",
               "Шампиньоны — 300 г",
@@ -263,6 +263,67 @@ export const useProductsStore = defineStore("products", () => {
               "step": 4,
               "img": "https://yastatic.net/avatars/get-grocery-goods/2750890/71e0de92-f93c-4d78-91eb-92b183dbfdb8/918x612?webp=true",
               "description": "Подаём с зеленью и гренками."
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "video": "https://yastatic.net/s3/lavka-pigeon/video/f622975b-d41b-4285-a413-e05270ff8838.mp4",
+          "title": "Кускус с запечёнными овощами",
+          "description": "Запечённые овощи — сами по себе отличный гарнир, а в сочетании с кускусом и вовсе превращаются в полноценное горячее блюдо. Прелесть рецепта — в его вариативности: вместо цукини и баклажанов можно взять морковь, свёклу и любые другие овощи.",
+          "category": ["Гарниры и овощи", "Вегетарианское", "За 15 минут"],
+          "totaltime": "25 мин",
+          "activetime": "15 мин",
+          "slozhnost": "2 / 5",
+          "author": "Редакция Лавки",
+          "authorDescription": "Собираем интересные рецепты со всего света, а затем проверяем вместе с поварами и пробуем сами",
+          "ingredients": {
+            "title": "Ингредиенты на 4 порции",
+            "items": [
+              "Кускус — 240 г",
+              "Цукини — 2 шт.",
+              "Баклажан — 1 шт.",
+              "Красный лук — 2 шт.",
+              "Томаты черри — 400 г",
+              "Вода — 500 мл",
+              "Лимон — 2 шт.",
+              "Мята — 4 веточки",
+              "Чеснок — 2 зуб.",
+              "Оливковое масло — 5 ст. л.",
+              "Папика — по вкусу",
+              "Соль — по вкусу",
+              "Перец — по вкусу"
+            ],
+            "additional": "Также понадобятся духовка, форма для запекания"
+          },
+          "steps": [
+            {
+              "step": 1,
+              "img": "https://yastatic.net/avatars/get-grocery-goods/2791769/ac577039-e6ca-4668-8260-08ddc17f2f67/918x612?webp=true",
+              "description": "Разогреваем духовку до 220 °C. В это время нарезаем баклажан и цукини кубиками. Выжимаем сок одного лимона и натираем немного цедры. Лук нарезаем половинками или соломкой. Перекладываем все нарезанные овощи и томаты черри в форму для запекания, добавляем масло и специи по вкусу. Отправляем в духовку на 15–20 минут.",
+              "ingredients": ["Цукини — 2 шт.", "Баклажан — 1 шт.", "Красный лук — 2 шт.", "Томаты черри — 400 г", "Лимон — 1 шт.", "Оливковое масло — 4 ст. л."]
+            },
+            {
+              "step": 2,
+              "img": "https://yastatic.net/avatars/get-grocery-goods/2750890/ab03153d-95a8-4797-bfb8-5f9bac8f1e3f/918x612?webp=true",
+              "description": "Кускус заливаем кипятком — долго варить его не нужно. Добавляем специи и немного оливкового масла.",
+              "ingredients": ["Кускус — 240 г", "Вода — 500 мл", "Оливковое масло — 1 ст. л.", "Паприка — по вкусу"]
+            },
+            {
+              "step": 3,
+              "img": "https://yastatic.net/avatars/get-grocery-goods/2783132/01f08697-b9a1-4bdf-8d5b-5dec9b920bee/918x612?webp=true",
+              "description": "Мелко рубим мяту и кладём её в ёмкость. Туда же добавляем лимонную цедру и вторую половину лимонного сока. Мелко рубим зубчик чеснока и добавляем туда же.",
+              "ingredients": ["Лимон — 1 шт.", "Мята — 4 веточки", "Чеснок — 2 зуб."]
+            },
+            {
+              "step": 4,
+              "img": "https://yastatic.net/avatars/get-grocery-goods/2791769/83c52b18-34b5-4588-98e8-28b5ca21ebf1/918x612?webp=true",
+              "description": "Теперь достаём из духовки овощи, смешиваем с кускусом, добавляем гремолату из лимона и мяты. По желанию добавляем ещё немного лимонного сока и приправляем по вкусу."
+            },
+            {
+              "step": 5,
+              "img": "https://yastatic.net/avatars/get-grocery-goods/2791769/93f5066d-3c85-4d29-bdf8-ffbbadaea20d/918x612?webp=true",
+              "description": "Подаём с салатом или просто так."
             }
           ]
         }
@@ -574,6 +635,203 @@ export const useProductsStore = defineStore("products", () => {
         },
       ],
     },
+    {
+      "category": "lovelavka",
+      "items": [
+        {
+          "id": 40,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2888787/81c2d868-f2cc-4564-9ba8-2eaae09f77b6/600x600?webp=true",
+          "description": "Медовички Из Лавки",
+          "weight": "120 г",
+          "price": "160",
+          "oldPrice": "229"
+        },
+        {
+          "id": 41,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2888787/a4fda71c-5587-4295-a776-d8a085552352/600x600?webp=true",
+          "description": "Торт МонтБлант Из Лавки",
+          "weight": "400 г",
+          "price": "419",
+          "oldPrice": "599"
+        },
+        {
+          "id": 42,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2783132/5e248cdb-67be-4a2e-981a-6ccbc30aee2a/600x600?webp=true",
+          "description": "Чизкейк Нью-Йорк Из Лавки",
+          "weight": "70 г",
+          "price": "97",
+          "oldPrice": "139"
+        },
+        {
+          "id": 43,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2783132/8e2d0e6a-5cfd-44fa-8906-7556e38f3db6/600x600?webp=true",
+          "description": "Трайфл морковный Из Лавки творожный сыр",
+          "weight": "168 г",
+          "price": "171",
+          "oldPrice": "245"
+        },
+        {
+          "id": 44,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2750890/0b04623e-ab78-42e7-b658-9299256dadaf/600x600?webp=true",
+          "description": "Вупи пай Из Лавки банан в карамели",
+          "weight": "90 г",
+          "price": "160",
+          "oldPrice": "229"
+        },
+        {
+          "id": 45,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2888787/84778605-185e-4851-8378-d40d3b9191a3/600x600?webp=true",
+          "description": "Вупи пай Из Лавки ваниль и лесная ягода",
+          "weight": "90 г",
+          "price": "160",
+          "oldPrice": "229"
+        },
+        {
+          "id": 46,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2888787/e1c73ff8-7033-4032-934b-002aee57ec5d/600x600?webp=true",
+          "description": "Вупи пай Из Лавки пряная вишня",
+          "weight": "90 г",
+          "price": "160",
+          "oldPrice": "229"
+        },
+        {
+          "id": 47,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/5416507/99f2205a-b1f8-4600-b233-4faba1b846d7/600x600?webp=true",
+          "description": "Пирожное кейк-попс Из Лавки лесные ягоды",
+          "weight": "60 г",
+          "price": "90",
+          "oldPrice": "129"
+        },
+        {
+          "id": 48,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2998515/4d687c60-5d1a-414a-954c-1066474b32c9/600x600?webp=true",
+          "description": "Пирожное кейк-попс Из Лавки ореховое",
+          "weight": "60 г",
+          "price": "90",
+          "oldPrice": "129"
+        },
+        {
+          "id": 49,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2756334/e2baef03-3457-4be9-b537-974cb9956e86/600x600?webp=true",
+          "description": "Торт медово-сметанный Из Лавки со сгущёнкой",
+          "weight": "400 г",
+          "price": "377",
+          "oldPrice": "539"
+        },
+        {
+          "id": 50,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2750890/faf05fc7-141c-485e-92d9-7047a05b1303/600x600?webp=true",
+          "description": "Торт Графские развалины Из Лавки",
+          "weight": "100 г",
+          "price": "139",
+          "oldPrice": "199"
+        },
+        {
+          "id": 51,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2888787/4f07ccce-18cf-43f3-a55a-22d3d14d2a65/600x600?webp=true",
+          "description": "Торт шоколадно-ореховый Из Лавки",
+          "weight": "105 г",
+          "price": "139",
+          "oldPrice": "199"
+        },
+        {
+          "id": 52,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2888787/34cdde7b-9b85-4a84-91a4-d819141230a7/600x600?webp=true",
+          "description": "Торт Медовый Из Лавки",
+          "weight": "120 г",
+          "price": "118",
+          "oldPrice": "169"
+        },
+        {
+          "id": 53,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2888787/08f66941-c530-475e-867e-222b977313e6/600x600?webp=true",
+          "description": "Торт Красный бархат Из Лавки",
+          "weight": "120 г",
+          "price": "118",
+          "oldPrice": "169"
+        },
+        {
+          "id": 54,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2888787/7b9ca4c9-da21-44f5-8d8b-1d7fb588ee30/600x600?webp=true",
+          "description": "Чизкейк Нью Йорк Из Лавки классический",
+          "weight": "130 г",
+          "price": "139",
+          "oldPrice": "199"
+        },
+        {
+          "id": 55,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2888787/bbfaa1f0-9b2f-4eea-a5e8-4041db2645ac/600x600?webp=true",
+          "description": "Чизкейк фисташковый Из Лавки",
+          "weight": "130 г",
+          "price": "146",
+          "oldPrice": "209"
+        },
+        {
+          "id": 56,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2750890/adce5803-6cea-4e5a-b4fb-19362663c296/600x600?webp=true",
+          "description": "Чизкейк Орео Из Лавки",
+          "weight": "150 г",
+          "price": "146",
+          "oldPrice": "209"
+        },
+        {
+          "id": 57,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2750890/2b81c32d-59e4-461a-9cfa-8a7d87c1dfdd/600x600?webp=true",
+          "description": "Наполеон Из Лавки со сгущёнкой",
+          "weight": "125 г",
+          "price": "160",
+          "oldPrice": "229"
+        },
+        {
+          "id": 58,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2750890/e8044a78-81d6-4b93-a114-50973702357e/600x600?webp=true",
+          "description": "Пирожное арахисовое Из Лавки",
+          "weight": "125 г",
+          "price": "202",
+          "oldPrice": "289"
+        },
+        {
+          "id": 59,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2805921/8c2c2c13-a661-4488-8506-7da6e0f77491/600x600?webp=true",
+          "description": "Пирожное Панчо с бананом Из Лавки",
+          "weight": "125 г",
+          "price": "160",
+          "oldPrice": "229"
+        },
+        {
+          "id": 60,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2750890/4298345f-f4cb-41a1-afc7-6fb5d24dd091/600x600?webp=true",
+          "description": "Пирожные Из Лавки Шмель и Божья коровка",
+          "weight": "76 г",
+          "price": "160",
+          "oldPrice": "229"
+        },
+        {
+          "id": 61,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2783132/ceee3d70-9dbb-421a-9c50-031a193c12cc/600x600?webp=true",
+          "description": "Картошка классическая Из Лавки",
+          "weight": "100 г",
+          "price": "115",
+          "oldPrice": "165"
+        },
+        {
+          "id": 62,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2888787/d69c5353-4dd0-4b17-8e00-41b9b6654e7b/600x600?webp=true",
+          "description": "Пирожное Картошка Из Лавки карамель",
+          "weight": "300 г",
+          "price": "342",
+          "oldPrice": "489"
+        },
+        {
+          "id": 63,
+          "image": "https://yastatic.net/avatars/get-grocery-goods/2750890/048879ca-17b9-4702-92de-2ef7bee8dda6/600x600?webp=true",
+          "description": "Пирожное Картошка Из Лавки матча",
+          "weight": "110 г",
+          "price": "157",
+          "oldPrice": "225"
+        }
+      ]
+    }
   ]);
 
   const getProductsByCategory = (category) => {

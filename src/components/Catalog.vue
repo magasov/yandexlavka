@@ -6,12 +6,12 @@
             <h3>Каталог</h3>
 
             <nav class="links">
-                <router-link :to="'/'"> <img
+                <router-link :to="'/lovelavka'"> <img
                         srcset="https://yastatic.net/avatars/get-grocery-goods/2998515/bccfe9f8e863453f9babb72d4d9b0d0e/40x40-webp 1x,https://yastatic.net/avatars/get-grocery-goods/2998515/bccfe9f8e863453f9babb72d4d9b0d0e/80x80-webp 2x"
                         src="https://yastatic.net/avatars/get-grocery-goods/2998515/bccfe9f8e863453f9babb72d4d9b0d0e/40x40-webp"
                         decoding="async" loading="eager" alt="Придумано Яндекс Лавкой" class="i1y1fbtp" width="40"
                         height="40" role="presentation">
-                    Придумано Яндекс Лавкой</router-link>
+                    Придумано Вай Лавкой</router-link>
                 <router-link :to="'/ready-meals'"><img
                         srcset="https://yastatic.net/avatars/get-grocery-goods/2750890/8ec7075a680646a08325b8cdf25565de/40x40-webp 1x,https://yastatic.net/avatars/get-grocery-goods/2750890/8ec7075a680646a08325b8cdf25565de/80x80-webp 2x"
                         src="https://yastatic.net/avatars/get-grocery-goods/2750890/8ec7075a680646a08325b8cdf25565de/40x40-webp"

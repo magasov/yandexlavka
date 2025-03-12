@@ -17,6 +17,8 @@ import { computed } from 'vue';
 import Catalog from "../components/Catalog.vue";
 import Card from '@/components/Card.vue';
 import Cart from '@/components/Cart.vue';
+window.scrollTo(0,0)
+
 
 const productsStore = useProductsStore();
 const bakeryItems = computed(() => productsStore.getProductsByCategory('drinks'));

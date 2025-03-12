@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps, defineEmits } from 'vue';
 import { useRouter } from 'vue-router';
 
 defineProps({
@@ -26,6 +26,8 @@ defineProps({
     required: true,
   },
 });
+
+const emit = defineEmits(['item-added']);
 
 const router = useRouter();
 
@@ -43,8 +45,8 @@ const addToCart = (item) => {
     cart.push({ ...item, quantity: 1 });
   }
 
-  window.location.reload()
   localStorage.setItem('cart', JSON.stringify(cart));
+  emit('item-added', cart); 
 };
 </script>
 
@@ -56,6 +58,8 @@ const addToCart = (item) => {
     background-color: #f8f7f5;
     border-radius: 24px;
     padding: 0 0 10px 0;
+    cursor: pointer;
+
     .discriptionOther {
       padding: 0px 12px 16px;
       height: 90px;

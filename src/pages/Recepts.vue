@@ -15,9 +15,9 @@
                         <p>{{ currentProduct.totaltime }}</p>
                         <span>общее время готовки</span>
                     </div>
-                    <div class="times">
+                    <div class="times" v-if="currentProduct.activetime">
                       <p>{{ currentProduct.activetime }}</p>
-                        <span>активная готовка</span>
+                        <span>активная готовка</span> 
                     </div>
                     <div class="times">
                       <p>{{ currentProduct.slozhnost }}</p>
@@ -34,10 +34,11 @@
                 </div>
 
                 <div class="categories__receptes">
+                    <RouterLink v-for="item in currentProduct.category">{{ item }}</RouterLink>
                     <RouterLink>Все рецепты</RouterLink>
                     <!-- <RouterLink>Десерты</RouterLink>
                     <RouterLink>Фрукты и ягоды</RouterLink> -->
-                    <RouterLink>За 15 минут</RouterLink>
+                  
                 </div>
             </div>
 

@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import { defineProps, defineEmits } from 'vue';
+import { defineProps } from 'vue';
 import { useRouter } from 'vue-router';
 
 defineProps({
@@ -27,14 +27,13 @@ defineProps({
   },
 });
 
-const emit = defineEmits(['item-added']);
-
 const router = useRouter();
 
 const goToProductPage = (id) => {
   router.push(`/product/${id}`);
 };
 
+// Передаем функцию addToCart через props или используем глобальный доступ
 const addToCart = (item) => {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
   const existingItem = cart.find((cartItem) => cartItem.id === item.id);
@@ -46,10 +45,12 @@ const addToCart = (item) => {
   }
 
   localStorage.setItem('cart', JSON.stringify(cart));
-  emit('item-added', cart); 
+  // Вызываем функцию обновления корзины напрямую через глобальный доступ
+  if (window.updateCart) {
+    window.updateCart();
+  }
 };
 </script>
-
   
   <style lang="scss" scoped>
   .cardOther {

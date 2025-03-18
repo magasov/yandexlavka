@@ -38,9 +38,8 @@
   </div>
 </template>
 
-  
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 const cartItems = ref([]);
 
@@ -65,18 +64,18 @@ const updateQuantity = (itemId, amount) => {
   }
 };
 
-const removeFromCart = (itemId) => {
-  const cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const updatedCart = cart.filter((item) => item.id !== itemId);
-  localStorage.setItem('cart', JSON.stringify(updatedCart));
-  loadCart();
-};
+// Глобальная функция для обновления корзины
+window.updateCart = loadCart;
 
 onMounted(() => {
   loadCart();
+  window.addEventListener('storage', loadCart);
+});
+
+onUnmounted(() => {
+  window.removeEventListener('storage', loadCart);
 });
 </script>
-
   
   <style lang="scss" scoped>
   .cart {

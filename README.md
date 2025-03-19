@@ -17,6 +17,21 @@
     </div>
 </div>
 
+# Обновление 2.0 (19.03.2025)
+✅ Обновления:
+1. Добавлены рецепты (как приготовить, ингредиенты, видео, и т.д) Также есть для них отдельные страницы 
+
+![Снимок экрана 2025-03-19 112101](https://github.com/user-attachments/assets/9366d3c9-4428-42d0-ac59-ab34c34a95d5)
+![Снимок экрана 2025-03-19 112132](https://github.com/user-attachments/assets/180e9ce2-0ca6-4b1d-83ec-77f843ed79ae)
+![Вай Лавка _ Главная - Google Chrome 2025-03-19 11-22-16](https://github.com/user-attachments/assets/44d9790b-aa50-4386-b5a8-11b4dc586c4c)
+
+
+2. Новая страница с товарами
+
+![Вай Лавка _ Главная - Google Chrome 2025-03-19 11-26-18](https://github.com/user-attachments/assets/0b98732a-a1b6-47d2-96ac-aa12de13717e)
+
+
+
 ## Gallery
 
    <img src="./src/assets/mysite.png" alt="Gallery">

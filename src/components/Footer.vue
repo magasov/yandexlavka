@@ -63,7 +63,7 @@
             <div class="footerH">
                 <div class="logoApp">
                         <div class="logoF">
-                            <img src="../logo.svg" alt="#">
+                            <img src="../assets/icons/logo.svg" alt="#">
                         </div>
                         <div class="appF">
                             <img src="https://avatars.mds.yandex.net/get-bunker/128809/56d49f31c8e88a2822fe26c77b0ea965d22837e2/orig" alt="#">
